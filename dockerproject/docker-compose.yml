@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+
+  tomcat:
+    build: ./tomcat
+    ports:
+      - "80:8080"
+    volumes:
+      - data:/usr/local/tomcat/webapps/appp
+
+  warfile-artefact:
+     build: ./html
+     volumes:
+      - data:/tmp/
+
+volumes:
+   data:
