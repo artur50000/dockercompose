@@ -1,0 +1,21 @@
+version: "2.2"
+
+services:
+     tomcat:
+         build: ./tomcat-alpine
+         ports:
+             - "80:8080"
+         links:
+            - warfile-artefact
+         volumes:
+            - data:/usr/local/tomcat/webapps/appp
+
+
+
+     warfile-artefact:
+         build: ./htmltest
+         volumes:
+             - data:/tmp/
+
+volumes:
+   data:
