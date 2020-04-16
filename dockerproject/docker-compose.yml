@@ -1,16 +1,16 @@
-version: "3.7"
+version: "3.3"
 
 services:
 
   tomcat:
-    build: ./tomcat
+    build: ./tomcat-alpine
     ports:
       - "80:8080"
     volumes:
-      - data:/usr/local/tomcat/webapps/appp
+      - data:/usr/local/tomcat/webapps
 
   warfile-artefact:
-     build: ./html
+     build: ./htmltest
      volumes:
       - data:/tmp/
 

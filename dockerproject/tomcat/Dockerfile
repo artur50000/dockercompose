@@ -1,4 +1,3 @@
 FROM tomcat:8.0-alpine
 
-WORKDIR /usr/local/tomcat/webapps/appp
-
+WORKDIR /usr/local/tomcat/webapps
